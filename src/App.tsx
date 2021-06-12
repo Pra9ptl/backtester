@@ -1,26 +1,57 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CustomAutoComplete from './components/CustomAutoComplete';
+import FastfoodIcon from '@material-ui/icons/Fastfood';
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
+import BusinessIcon from '@material-ui/icons/Business';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const movies = [
+        { title: 'Bacon' },
+        { title: 'Fish' },
+        { title: 'Sandwhich' },
+        { title: 'Burger' },
+        { title: 'Burrito' },
+    ];
+
+    return (
+        <div className="App">
+            <CustomAutoComplete
+                options={movies}
+                label="Food"
+                icon={
+                    <FastfoodIcon
+                        color="primary"
+                        fontSize="large"
+                        style={{ marginRight: '8px' }}
+                    />
+                }
+            />
+            <CustomAutoComplete
+                options={movies}
+                label="Cars"
+                icon={
+                    <DriveEtaIcon
+                        color="secondary"
+                        fontSize="large"
+                        style={{ marginRight: '8px' }}
+                    />
+                }
+            />
+            <CustomAutoComplete
+                options={movies}
+                label="Company"
+                icon={
+                    <BusinessIcon
+                        color="action"
+                        fontSize="large"
+                        style={{ marginRight: '8px' }}
+                    />
+                }
+            />
+        </div>
+    );
 }
 
 export default App;
