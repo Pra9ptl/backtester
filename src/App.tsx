@@ -24,7 +24,6 @@ function App() {
                     <FastfoodIcon
                         color="primary"
                         fontSize="large"
-                        style={{ marginRight: '8px' }}
                     />
                 }
             />
@@ -35,7 +34,6 @@ function App() {
                     <DriveEtaIcon
                         color="secondary"
                         fontSize="large"
-                        style={{ marginRight: '8px' }}
                     />
                 }
             />
@@ -46,7 +44,6 @@ function App() {
                     <BusinessIcon
                         color="action"
                         fontSize="large"
-                        style={{ marginRight: '8px' }}
                     />
                 }
             />
